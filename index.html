@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story title</title>
+    <link rel="icon" type="image/x-icon" href="favicon.icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts for a mystical feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a2a44 0%, #2e1b3d 100%);
+            color: #e0e0e0;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+        }
+        
+        .story-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 3em;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 0.3em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in;
+        }
+        
+        .author {
+            font-style: italic;
+            color: #a0a0c0;
+            text-align: center;
+            margin-bottom: 2em;
+            font-size: 1.2em;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .story-content {
+            font-size: 1.1em;
+            color: #d0d0e0;
+        }
+        
+        .story-content p {
+            margin-bottom: 1.5em;
+            transition: color 0.3s ease;
+        }
+        
+        .story-content p:hover {
+            color: #ffffff;
+        }
+        
+        .story-image {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 10px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .story-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .social-share {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 15px;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .social-btn i {
+            margin-right: 8px;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+        
+        .fb { background: linear-gradient(45deg, #3b5998, #4c70ba); }
+        .whatsapp { background: linear-gradient(45deg, #25d366, #36e577); }
+        .x { background: linear-gradient(45deg, #000000, #333333); }
+        .tiktok { background: linear-gradient(45deg, #000000, #ff0050); }
+        .youtube { background: linear-gradient(45deg, #ff0000, #ff3333); }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .title, .author, .social-share {
+            animation: fadeIn 1.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <h1 class="title">HEADING</h1>
+        <div class="author">by ENOCK</div>
+        
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank" class="social-btn fb">
+                <i class="fab fa-facebook-f"></i> Share
+            </a>
+            <a href="https://api.whatsapp.com/send?text=YOUR_URL" target="_blank" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> Share
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_URL" target="_blank" class="social-btn x">
+                <i class="fab fa-x-twitter"></i> Share
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-btn tiktok">
+                <i class="fab fa-tiktok"></i> Share
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="social-btn youtube">
+                <i class="fab fa-youtube"></i> Share
+            </a>
+        </div>
+        
+        <div class="story-content">
+            <p></p>
+            <img src="https://via.placeholder.com/800x400?text=Crystal+Raven+in+Woods" alt="IMAGE" class="story-image">
+            
+            <p></p>
+            <p></p>
+            <img src="https://via.placeholder.com/800x400?text=Crystalline+Pool" alt="IMAGE" class="story-image">
+            
+            <p></p>
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.story-image');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.toggle('zoomed');
+            });
+        });
+    </script>
+</body>
+</html>
